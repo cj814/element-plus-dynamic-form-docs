@@ -9,6 +9,9 @@ import QuickFormRenderDemo from './components/QuickFormRenderDemo.vue'
 import QuickBaseTableDemo from './components/QuickBaseTableDemo.vue'
 import FormRenderBasic from './components/FormRender/basic.vue'
 import FormRenderCustom from './components/FormRender/custom.vue'
+import FormItemEvent from './components/FormRender/formItemEvent.vue'
+import TemplateSlot from './components/FormRender/templateSlot.vue'
+import JsxSlot from './components/FormRender/jsxSlot.vue'
 
 export default defineClientConfig({
   enhance({ app }) {
@@ -20,5 +23,8 @@ export default defineClientConfig({
     app.component('QuickBaseTableDemo', QuickBaseTableDemo)
     app.component('FormRenderBasic', FormRenderBasic)
     app.component('FormRenderCustom', FormRenderCustom)
+    app.component('FormItemEvent', FormItemEvent)
+    app.component('TemplateSlot', TemplateSlot)
+    app.component('JsxSlot', JsxSlot)
   }
 })

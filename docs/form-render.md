@@ -62,11 +62,53 @@
 
 获取表单实例后，调用 `getField` 方法获取表单项实例，调用表单项方法。具体方法名参考 [FormItem Exposes](https://cn.element-plus.org/zh-CN/component/form#formitem-exposes)。
 
+::: tabs#form-item-events
+
+@tab 示例#demo
+
+<FormItemEvent />
+
+@tab 代码#code
+
+@[code](./.vuepress/components/FormRender/formItemEvent.vue)
+
+:::
+
 ## 插槽
 
 ### template 插槽
 
+`renderType` 设置为 `slot` ，在 `template` 标签里编写插槽内容
+
+::: tabs#template-slot
+
+@tab 示例#demo
+
+<TemplateSlot />
+
+@tab 代码#code
+
+@[code](./.vuepress/components/FormRender/templateSlot.vue)
+
+:::
+
 ### jsx 插槽
+
+`renderType` 正常设置，`comProps` 中设置 `slots` 属性，值为插槽名称。
+
+::: tabs#jsx-slot
+
+@tab 示例#demo
+
+<JsxSlot />
+
+@tab 代码#code
+
+@[code](./.vuepress/components/FormRender/jsxSlot.vue)
+
+:::
+
+> 使用 `jsx` 插槽时，需安装 `@vitejs/plugin-vue-jsx` 插件，`script` 标签需设置 `lang=tsx`
 
 ## API
 
