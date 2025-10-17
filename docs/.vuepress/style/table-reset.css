@@ -13,3 +13,7 @@ tr.el-table__row {
 .el-table__row td {
   border: none;
 }
+
+.el-table__expanded-cell {
+  border: none;
+}
