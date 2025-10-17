@@ -1,0 +1,15 @@
+.el-table__header, .el-table__body {
+  margin: 0!important;
+}
+
+tr.el-table__row {
+  background: none !important;
+}
+
+.el-table__header th {
+  border: none;
+}
+
+.el-table__row td {
+  border: none;
+}
