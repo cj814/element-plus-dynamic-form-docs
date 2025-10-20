@@ -6,25 +6,10 @@
     :is-virtual="true"
     :width="700"
     :height="400"
+    :estimated-row-height="64"
     expand-column-key="name"
     ref="tableRef"
-  >
-    <!-- <template #action="scope">
-        <el-button type="text" @click="handleBtnEdit(scope.rowData)"
-          >修改</el-button
-        >
-      </template> -->
-    <!-- <template #overlay>
-        <div
-          class="el-loading-mask"
-          style="display: flex; align-items: center; justify-content: center"
-        >
-          <el-icon class="is-loading" color="red" :size="26">
-            <loading-icon />
-          </el-icon>
-        </div>
-      </template> -->
-  </base-table>
+  />
   <div style="margin-top: 16px">
     <el-button type="primary" @click="handleSubmit">提交</el-button>
     <el-button type="primary" @click="handleScroll">滚动</el-button>
@@ -33,6 +18,7 @@
 
 <script lang="tsx" setup name="Issuer">
 import { computed, ref } from 'vue'
+import { ElMessage } from 'element-plus'
 
 const nameRequired = ref(true)
 const tableColumns = computed(() => [
@@ -73,12 +59,12 @@ const tableColumns = computed(() => [
     renderType: 'slot',
     prop: 'action',
     label: '操作',
-    width: 100,
+    width: 150,
     comProps: {
       slots: {
         default: (scope: any) => (
-          <el-button type="text" onClick={() => handleBtnEdit(scope.rowData)}>
-            修改11
+          <el-button type="text" onClick={() => handleGetRowData(scope.rowData)}>
+            获取当前行数据
           </el-button>
         )
       }
@@ -87,7 +73,6 @@ const tableColumns = computed(() => [
 ])
 
 const tableRef = ref()
-
 const tableData = ref([
   {
     name: '张三',
@@ -2523,23 +2508,19 @@ const tableData = ref([
   }
 ])
 
-const handleBtnEdit = (row: any) => {
-  debugger
+const handleGetRowData = (row: any) => {
+  console.log('row:', row)
 }
 
 const handleSubmit = () => {
   tableRef.value.validate((valid) => {
     if (valid) {
-      alert('submit!')
+      ElMessage.success('submit!')
     } else {
-      console.log('error submit!!')
+      ElMessage.error('error submit!!')
       return false
     }
   })
-
-  setTimeout(() => {
-    nameRequired.value = !nameRequired.value
-  }, 1000)
 }
 
 const handleScroll = () => {

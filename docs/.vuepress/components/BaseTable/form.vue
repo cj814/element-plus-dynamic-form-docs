@@ -5,26 +5,21 @@
     :is-form="true"
     @row-click="handleRowClick"
     ref="baseTableRef"
-  >
-    <template #action="{ row }">
-      <el-button type="text">编辑</el-button>
-    </template>
-  </base-table>
+  />
   <div style="margin-top: 16px">
     <el-button type="primary" @click="handleSave">保存</el-button>
     <el-button type="primary" @click="handleReset">重置</el-button>
     <el-button type="primary" @click="handleClearValidate">清除校验</el-button>
     <el-button type="primary" @click="handleClear"> 清空所选项 </el-button>
     <el-button type="primary" @click="handleGetSelectionRows"> 获取选中行 </el-button>
+    <el-button type="primary" @click="hanldeClearSecondRowBirthValidate"> 清空第二行生日字段校验 </el-button>
   </div>
 </template>
 
 <script setup lang="ts">
 import { computed, ref } from 'vue'
 
-const ageRequired = ref(true)
 const baseTableRef = ref()
-
 const tableColumns = computed(() => [
   {
     renderType: 'selection',
@@ -33,8 +28,8 @@ const tableColumns = computed(() => [
   {
     prop: 'name',
     label: '姓名',
-    width: 150,
     renderType: 'el-input',
+    width: 220,
     itemProps: {
       rules: [
         {
@@ -52,7 +47,7 @@ const tableColumns = computed(() => [
     prop: 'age',
     label: '年龄',
     renderType: 'el-input-number',
-    width: 240,
+    width: 220,
     itemProps: {
       rules: [
         {
@@ -73,7 +68,7 @@ const tableColumns = computed(() => [
     renderType: 'el-date-picker',
     prop: 'birthday',
     label: '生日',
-    width: 180,
+    width: 200,
     itemProps: {
       rules: [
         {
@@ -85,14 +80,9 @@ const tableColumns = computed(() => [
     },
     comProps: {
       type: 'date',
-      valueFormat: 'yyyy-MM-dd',
+      valueFormat: 'YYYY-MM-DD',
       placeholder: '请选择生日'
     }
-  },
-  {
-    prop: 'action',
-    label: '操作',
-    renderType: 'slot'
   }
 ])
 const tableData = ref([
@@ -129,16 +119,11 @@ const handleReset = () => {
 }
 
 const handleClearValidate = () => {
-  // tableRef.value?.clearValidate();
-  // const ageFieldRef = tableRef.value?.getField("tableData.0.age");
-  // console.log("ageFieldRef:", ageFieldRef);
-  // ageFieldRef
-  baseTableRef.value?.scrollToField('tableData.0.age')
+  baseTableRef.value?.clearValidate()
 }
 
 const handleRowClick = (row: Record<string, any>) => {
-  // console.log(row);
-  // ageRequired.value = !ageRequired.value;
+  console.log('row:', row)
 }
 
 const handleClear = () => {
@@ -147,6 +132,11 @@ const handleClear = () => {
 
 const handleGetSelectionRows = () => {
   const selectionRows = baseTableRef.value?.getSelectionRows() || []
-  console.log('选中行:', selectionRows)
+  console.log('selectionRows:', selectionRows)
+}
+
+const hanldeClearSecondRowBirthValidate = () => {
+  const birthField = baseTableRef.value?.getField('tableData.1.birthday')
+  birthField?.clearValidate()
 }
 </script>

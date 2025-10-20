@@ -17,3 +17,25 @@ tr.el-table__row {
 .el-table__expanded-cell {
   border: none;
 }
+
+.el-picker-panel__content th,
+.el-picker-panel__content td {
+  border: none;
+}
+
+.el-picker-panel__content tbody tr {
+  background: none !important;
+}
+
+table {
+  display: table;
+}
+
+.el-table__body-wrapper .el-table__row .el-table-column--selection .cell {
+  position: relative;
+  top: -15px;
+}
+
+.el-table-v2__row .el-form-item {
+  margin-top: 18px;
+}
