@@ -149,14 +149,50 @@
 
 ## API
 
-| 属性          | 释义              | 说明                                                                                                  |
-| ------------- | ----------------- | ----------------------------------------------------------------------------------------------------- |
-| `formItems`   | 表单配置项        | FormRender 自身属性                                                                                   |
-| `formData`    | 表单数据          | FormRender 自身属性                                                                                   |
-| `baseColSpan` | 基础列宽度        | FormRender 自身属性，默认 8                                                                           |
-| `renderType`  | 表单项组件类型    | 表单项属性，可以为 element-plus 组件，如(el-input,el-select 等)，也可以为自定义组件                   |
-| `visible`     | 表单项是否显示    | 表单项属性，默认 true                                                                                 |
-| `colProps`    | el-col 属性       | 表单项属性，参考 [el-col](https://cn.element-plus.org/zh-CN/component/layout#col-api)                 |
-| `itemProps`   | el-form-item 属性 | 表单项属性，参考 [el-form-item](https://cn.element-plus.org/zh-CN/component/form#formitem-attributes) |
-| `comProps`    | 组件属性          | 表单项属性，参考 el-input、el-select 或自定义组件等自身属性                                           |
-| `comEvents`   | 组件事件          | 表单项属性，参考 el-input、el-select 或自定义组件等自身事件，如 onBlur,onChange 等                    |
+<style>
+  table {
+    width: 100%;
+  }
+  table th:nth-child(1) {
+    width: 20%;
+  }
+  table th:nth-child(2) {
+    width: 25%;
+  }
+  table th:nth-child(3) {
+    width: 55%;
+  }
+</style>
+
+### Table 属性
+
+| 属性           | 释义             | 说明                                                                                              |
+| -------------- | ---------------- | ------------------------------------------------------------------------------------------------- |
+| `isVirtual`    | 是否虚拟表格     | 默认 false                                                                                        |
+| `isForm`       | 是否 Form 模式   | 默认 false                                                                                        |
+| `tableColumns` | 表格列配置项     | 参考 [el-table-column](https://cn.element-plus.org/zh-CN/component/table#table-column-attributes) |
+| `tableData`    | 表格数据         | 表格数据，默认 []                                                                                 |
+| `total`        | 表格数据总数     | 表格数据总数，默认 0                                                                              |
+| `isAutoResize` | 是否自动调整列宽 | 默认 false（`isVirtual`为 true 时才生效）                                                         |
+
+其他属性
+
+- `isVirtual` 为 `true` 时，参考 [el-table-v2](https://cn.element-plus.org/zh-CN/component/table-v2#tablev2-api) 。
+- `isVirtual` 为 `false` 时，参考 [el-table](https://cn.element-plus.org/zh-CN/component/table#table-api) 。
+
+### TableColumn 属性
+
+| 属性         | 释义              | 说明                                                                                                                      |
+| ------------ | ----------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| `prop`       | 表单项属性名      | 用于绑定表单数据                                                                                                          |
+| `label`      | 列标题            | -                                                                                                                         |
+| `renderType` | 渲染类型          | 非必需，通常 `Form` 模式才使用，可以为 element-plus 组件，如(el-input,el-select 等)，也可以为自定义组件                   |
+| `children`   | 子列配置项        | 非必需，通常多级表头时才使用                                                                                              |
+| `itemProps`  | el-form-item 属性 | 非必需，通常 `Form` 模式才使用，参考 [el-form-item](https://cn.element-plus.org/zh-CN/component/form#formitem-attributes) |
+| `comProps`   | 组件属性          | 非必需，通常 `Form` 模式才使用，参考 el-input、el-select 或自定义组件等自身属性                                           |
+| `comEvents`  | 组件事件          | 非必需，通常 `Form` 模式才使用，参考 el-input、el-select 或自定义组件等自身事件，如 onBlur,onChange 等                    |
+
+其他属性
+
+- `isVirtual` 为 `true` 时，参考 [el-table-v2-column](https://cn.element-plus.org/zh-CN/component/table-v2#column-attribute) 。
+- `isVirtual` 为 `false` 时，参考 [el-table-column](https://cn.element-plus.org/zh-CN/component/table#table-column-%E5%B1%9E%E6%80%A7) 。

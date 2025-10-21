@@ -112,14 +112,38 @@
 
 ## API
 
-| 属性          | 释义              | 说明                                                                                                  |
-| ------------- | ----------------- | ----------------------------------------------------------------------------------------------------- |
-| `formItems`   | 表单配置项        | FormRender 自身属性                                                                                   |
-| `formData`    | 表单数据          | FormRender 自身属性                                                                                   |
-| `baseColSpan` | 基础列宽度        | FormRender 自身属性，默认 8                                                                           |
-| `renderType`  | 表单项组件类型    | 表单项属性，可以为 element-plus 组件，如(el-input,el-select 等)，也可以为自定义组件                   |
-| `visible`     | 表单项是否显示    | 表单项属性，默认 true                                                                                 |
-| `colProps`    | el-col 属性       | 表单项属性，参考 [el-col](https://cn.element-plus.org/zh-CN/component/layout#col-api)                 |
-| `itemProps`   | el-form-item 属性 | 表单项属性，参考 [el-form-item](https://cn.element-plus.org/zh-CN/component/form#formitem-attributes) |
-| `comProps`    | 组件属性          | 表单项属性，参考 el-input、el-select 或自定义组件等自身属性                                           |
-| `comEvents`   | 组件事件          | 表单项属性，参考 el-input、el-select 或自定义组件等自身事件，如 onBlur,onChange 等                    |
+### Form 属性
+
+<style>
+  table {
+    width: 100%;
+  }
+  table th:nth-child(1) {
+    width: 20%;
+  }
+  table th:nth-child(2) {
+    width: 25%;
+  }
+  table th:nth-child(3) {
+    width: 55%;
+  }
+</style>
+
+| 属性          | 释义       | 说明    |
+| ------------- | ---------- | ------- |
+| `formItems`   | 表单配置项 | 默认 [] |
+| `formData`    | 表单数据   | 默认 {} |
+| `baseColSpan` | 基础列宽度 | 默认 24 |
+
+> 其他属性参考 [el-form](https://cn.element-plus.org/zh-CN/component/form#form-attributes)
+
+### FormItem 属性
+
+| 属性         | 释义              | 说明                                                                                      |
+| ------------ | ----------------- | ----------------------------------------------------------------------------------------- |
+| `renderType` | 表单项组件类型    | 可以为 element-plus 组件，如(el-input,el-select 等)，也可以为自定义组件                   |
+| `visible`    | 表单项是否显示    | 默认 true                                                                                 |
+| `colProps`   | el-col 属性       | 参考 [el-col](https://cn.element-plus.org/zh-CN/component/layout#col-api)                 |
+| `itemProps`  | el-form-item 属性 | 参考 [el-form-item](https://cn.element-plus.org/zh-CN/component/form#formitem-attributes) |
+| `comProps`   | 组件属性          | 参考 el-input、el-select 或自定义组件等自身属性                                           |
+| `comEvents`  | 组件事件          | 参考 el-input、el-select 或自定义组件等自身事件，如 onBlur,onChange 等                    |
