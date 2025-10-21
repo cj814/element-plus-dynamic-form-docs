@@ -7,7 +7,7 @@ import { markdownTabPlugin } from '@vuepress/plugin-markdown-tab'
 export default defineUserConfig({
   title: 'element-plus-dynamic-form',
   description: '基于 Element Plus 的动态表单/动态表格',
-  base: '/pages/',
+  base: './',
   theme: defaultTheme({
     sidebar: [
       {
