@@ -1,6 +1,7 @@
 import { defineClientConfig } from 'vuepress/client'
 import ElementPlus from 'element-plus'
 import 'element-plus/dist/index.css'
+import zhCn from 'element-plus/dist/locale/zh-cn.mjs'
 // 尝试直接导入组件
 import * as ElementPlusDynamicForm from 'element-plus-dynamic-form'
 const { FormRender, BaseTable } = ElementPlusDynamicForm
@@ -23,12 +24,13 @@ import BaseTableExpand from './components/BaseTable/expand.vue'
 import BaseTableAction from './components/BaseTable/action.vue'
 import BaseTableFormatter from './components/BaseTable/formatter.vue'
 import BaseTableMultiple from './components/BaseTable/multiple.vue'
+import BaseTablePagination from './components/BaseTable/pagination.vue'
 import BaseTableForm from './components/BaseTable/form.vue'
 import BaseTableVirtual from './components/BaseTable/virtual.vue'
 
 export default defineClientConfig({
   enhance({ app }) {
-    app.use(ElementPlus)
+    app.use(ElementPlus, { locale: zhCn })
     app.component('FormRender', FormRender)
     app.component('BaseTable', BaseTable)
     app.component('CustomSelect', CustomSelect)
@@ -46,6 +48,7 @@ export default defineClientConfig({
     app.component('BaseTableAction', BaseTableAction)
     app.component('BaseTableFormatter', BaseTableFormatter)
     app.component('BaseTableMultiple', BaseTableMultiple)
+    app.component('BaseTablePagination', BaseTablePagination)
     app.component('BaseTableForm', BaseTableForm)
     app.component('BaseTableVirtual', BaseTableVirtual)
   }

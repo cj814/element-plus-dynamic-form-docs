@@ -112,6 +112,22 @@
 
 :::
 
+## 分页
+
+`BaseTable` 支持分页，设置 `total` 属性不为 0（通常为服务器接口返回的总记录数），同时 `is-form` 设置 `false`。
+
+::: tabs#pagination
+
+@tab 示例#demo
+
+<BaseTablePagination />
+
+@tab 代码#code
+
+@[code](./.vuepress/components/BaseTable/pagination.vue)
+
+:::
+
 ## Form 模式
 
 `BaseTable` 支持 Form 模式，设置 `is-form` 为 `true`。
