@@ -12,8 +12,8 @@ importers:
         specifier: ^2.11.4
         version: 2.11.5(vue@3.5.22)
       element-plus-dynamic-form:
-        specifier: ^1.0.4
-        version: 1.0.4(element-plus@2.11.5(vue@3.5.22))(vue@3.5.22)
+        specifier: ^1.0.5
+        version: 1.0.5(element-plus@2.11.5(vue@3.5.22))(vue@3.5.22)
     devDependencies:
       '@vitejs/plugin-vue':
         specifier: ^5.2.4
@@ -1089,8 +1089,8 @@ packages:
   electron-to-chromium@1.5.237:
     resolution: {integrity: sha512-icUt1NvfhGLar5lSWH3tHNzablaA5js3HVHacQimfP8ViEBOQv+L7DKEuHdbTZ0SKCO1ogTJTIL1Gwk9S6Qvcg==}
 
-  element-plus-dynamic-form@1.0.4:
-    resolution: {integrity: sha512-5EjcLb9+TTdHtW6iHV0ts5e32+nICKSNkT11h6UFQQ8EMSl+C8fbgoU7tB/Vl+bbyFyKHg9EAiPZruUiFSoyug==}
+  element-plus-dynamic-form@1.0.5:
+    resolution: {integrity: sha512-S5UqbmvNlQg4mgnD+Yo3hSuF61wywhws6S6VvR3RDFBmfbise3qHF9fdZem6s0u3dpSknrDS1cUSzclE+sntag==}
     peerDependencies:
       element-plus: ^2.11.2
       vue: ^3.2.35
@@ -3063,7 +3063,7 @@ snapshots:
 
   electron-to-chromium@1.5.237: {}
 
-  element-plus-dynamic-form@1.0.4(element-plus@2.11.5(vue@3.5.22))(vue@3.5.22):
+  element-plus-dynamic-form@1.0.5(element-plus@2.11.5(vue@3.5.22))(vue@3.5.22):
     dependencies:
       element-plus: 2.11.5(vue@3.5.22)
       vue: 3.5.22
