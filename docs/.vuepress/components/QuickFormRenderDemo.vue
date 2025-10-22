@@ -1,5 +1,5 @@
 <template>
-  <form-render :form-items="formItems" :form-data="formData" :baseColSpan="12" ref="formRenderRef" />
+  <form-render :form-items="formItems" :form-data="formData" ref="formRenderRef" />
   <div>
     <el-button type="primary" @click="handleSubmit">提交</el-button>
     <el-button type="primary" @click="handleReset">重置</el-button>

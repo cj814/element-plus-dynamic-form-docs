@@ -1,5 +1,5 @@
 <template>
-  <form-render :form-items="formItems" :form-data="formData" :baseColSpan="24" ref="formRenderRef" />
+  <form-render :form-items="formItems" :form-data="formData" ref="formRenderRef" />
   <div>
     <el-button type="primary" @click="handleSubmit">提交</el-button>
     <el-button type="primary" @click="handleClearAgeValidate">清空年龄字段校验</el-button>

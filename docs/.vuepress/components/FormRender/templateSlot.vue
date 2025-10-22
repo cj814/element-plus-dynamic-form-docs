@@ -1,5 +1,5 @@
 <template>
-  <form-render :form-items="formItems" :form-data="formData" :baseColSpan="24" ref="formRenderRef">
+  <form-render :form-items="formItems" :form-data="formData" ref="formRenderRef">
     <template #image>
       <el-upload
         v-model:file-list="formData.image"

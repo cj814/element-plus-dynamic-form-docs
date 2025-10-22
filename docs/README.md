@@ -2,7 +2,7 @@
 
 home: true
 title: 首页
-heroImage: https://vuejs.press/images/hero.png
+heroImage: /hero.png
 actions:
 
 - text: 快速开始
