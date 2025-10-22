@@ -189,6 +189,9 @@
 | `tableColumns` | 表格列配置项     | 参考 [el-table-column](https://cn.element-plus.org/zh-CN/component/table#table-column-attributes) |
 | `tableData`    | 表格数据         | 表格数据，默认 []                                                                                 |
 | `total`        | 表格数据总数     | 表格数据总数，默认 0                                                                              |
+| `pageNum`      | 当前页码         | 默认 1                                                                                            |
+| `pageSize`     | 每页条数         | 默认 10                                                                                           |
+| `pageSizes`    | 每页条数选项     | 默认 [10, 20, 50, 100, 500]                                                                       |
 | `isAutoResize` | 是否自动调整列宽 | 默认 false（`isVirtual`为 true 时才生效）                                                         |
 
 其他属性
