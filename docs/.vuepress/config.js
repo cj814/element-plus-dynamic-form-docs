@@ -9,7 +9,7 @@ export default defineUserConfig({
   description: '基于 Element Plus 的动态表单/动态表格',
   base: '/element-plus-dynamic-form-docs/',
   head: [
-    ['link', { rel: 'icon', href: '/favicon.ico' }],
+    ['link', { rel: 'icon', href: '/element-plus-dynamic-form-docs/favicon.ico' }],
   ],
   theme: defaultTheme({
     sidebar: [

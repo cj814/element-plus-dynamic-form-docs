@@ -10,4 +10,4 @@ actions:
   link: /get-started.html
   type: primary
 
-footer: MIT Licensed | Copyright © 2025-present cj814
+footer: MIT Licensed | Copyright © 2025-present CJ
