@@ -12,6 +12,12 @@ export default defineUserConfig({
     ['link', { rel: 'icon', href: '/element-plus-dynamic-form-docs/favicon.ico' }],
   ],
   theme: defaultTheme({
+    navbar: [
+      {
+        text: 'GitHub',
+        link: 'https://github.com/cj814/element-plus-dynamic-form',
+      },
+    ],
     sidebar: [
       {
         text: '首页',
